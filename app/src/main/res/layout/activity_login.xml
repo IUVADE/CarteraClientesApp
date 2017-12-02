@@ -37,7 +37,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Aceptar" />
+            android:text="@string/btnlogin"
+            android:textSize="12pt"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorText"/>
 
     </LinearLayout>
 

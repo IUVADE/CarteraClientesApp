@@ -17,90 +17,95 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Distrito:" />
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Distrito"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Provincia:" />
+                android:hint="Provincia:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Departamento:" />
+                android:hint="Departamento:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Nombre Comercial:" />
+                android:hint="Nombre Comercial:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Comprobante:" />
+                android:hint="Comprobante:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Contabilidad:" />
+                android:hint="Contabilidad:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Actividad:" />
+                android:hint="Actividad:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Documentos:" />
+                android:hint="Documentos:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Afiliado al PLE:" />
+                android:hint="Afiliado al PLE:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Afiliado al SEE:" />
+                android:hint="Afiliado al SEE:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Fact. Elec.:" />
+                android:hint="Fact. Elec.:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Cliente:" />
+                android:hint="Cliente:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Direccion:" />
+                android:hint="Direccion:"
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/btnUbicar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ubicar en el Mapa"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:text="Ubicar en el Mapa" />
         </LinearLayout>
 
     </ScrollView>
