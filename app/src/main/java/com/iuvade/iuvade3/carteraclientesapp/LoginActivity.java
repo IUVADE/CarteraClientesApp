@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.iuvade.iuvade3.carteraclientesapp.views.FiltroClienteActivity;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     //se establece el boton para que pueda hacer la conexion a la clase Maps

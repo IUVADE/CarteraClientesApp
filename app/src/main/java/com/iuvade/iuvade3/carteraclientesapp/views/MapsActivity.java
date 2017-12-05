@@ -1,4 +1,4 @@
-package com.iuvade.iuvade3.carteraclientesapp;
+package com.iuvade.iuvade3.carteraclientesapp.views;
 
 import android.Manifest;
 import android.content.Context;
@@ -22,6 +22,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.iuvade.iuvade3.carteraclientesapp.R;
+import com.iuvade.iuvade3.carteraclientesapp.views.ClienteActivity;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.TextHttpResponseHandler;
 
@@ -44,6 +46,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        /* ELIMINAR ESTE FRAGMENTO DE CODIGO  XQ SE REEMPLAZARA CON LA CLASE HtttpHandler del pauete service
+
+
         AsyncHttpClient client=new AsyncHttpClient();
 
         client.post("google.com", new TextHttpResponseHandler() {
@@ -60,6 +65,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         });
 
+        */
     }
 
     @Override
