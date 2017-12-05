@@ -46,26 +46,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        /* ELIMINAR ESTE FRAGMENTO DE CODIGO  XQ SE REEMPLAZARA CON LA CLASE HtttpHandler del pauete service
 
-
-        AsyncHttpClient client=new AsyncHttpClient();
-
-        client.post("google.com", new TextHttpResponseHandler() {
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, String responseString) {
-
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-
-            }
-
-        });
-
-        */
     }
 
     @Override
