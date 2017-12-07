@@ -26,19 +26,12 @@ public class FiltroClienteActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                getDataClient();
+                //getDataClient();
                 Intent intentMaps = new Intent(FiltroClienteActivity.this, ListadoClientesActivity.class);
                 startActivity(intentMaps);
             }
         });
     }
 
-    private void getDataClient() {
-        HttpHandler handler = new HttpHandler();
-        //String url="http://192.168.1.45/sigem/init.php?tgs=php.facturacion.cliente.cliente.testRestServiceClient";
-        String url = "http://192.168.1.45/testRest/test.php";
-        String url2 = "http://192.168.1.66:3030/api/patients/";
-        String url3 = "http://192.168.1.35/odontosoft-php/api/patient_api.php?opt=all";
-        handler.getDataClient(url3, this);
-    }
+
 }

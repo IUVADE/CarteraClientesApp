@@ -44,15 +44,11 @@ public class HttpHandler {
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
+                    showMessage("FAILURE", error.getMessage());
                 }
             });
         } catch (Exception e) {
-            msg = "JSON_ERROR: " + e.getMessage();
-            AlertDialog.Builder builder = new AlertDialog.Builder(HttpHandler.this.activity);
-            builder.setTitle("Resultado de la peticion HTTP");
-            builder.setMessage(msg);
-            builder.create().show();
+            showMessage("ERROR JSON", e.getMessage());
         }
     }
 
@@ -93,13 +89,11 @@ public class HttpHandler {
             builder.setMessage(msg);
             builder.create().show();
         }
-
-//        Toast.makeText(this.activity.getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 
     public void showMessage(String titulo, String mensaje) {
         AlertDialog.Builder builder = new AlertDialog.Builder(HttpHandler.this.activity);
-        builder.setTitle("Resultado de la peticion HTTP");
+        builder.setTitle(titulo);
         builder.setMessage(mensaje);
         builder.create().show();
     }
@@ -107,7 +101,7 @@ public class HttpHandler {
     public String getDataJson(String response) throws JSONException {
         JSONArray jsonArray = new JSONArray(response);
         String texto = "Not found";
-        texto = jsonArray.getJSONObject(6).getString("nomApe");
+        texto = jsonArray.getJSONObject(1).getString("nom_ape");
 
         return texto;
     }
