@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wall4"
     tools:context="com.iuvade.iuvade3.carteraclientesapp.views.FiltroClienteActivity">
 
     <ScrollView
@@ -14,33 +15,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_marginLeft="5pt"
-            android:layout_marginRight="5pt">
+            android:layout_marginRight="5pt"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <android.support.design.widget.TextInputEditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Distrito"
-                    android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:hint="Distrito"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/colorText" />
 
-            </android.support.design.widget.TextInputLayout>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginTop="-45dp" />
+
+                </android.support.design.widget.TextInputLayout>
 
 
             </LinearLayout>
@@ -51,24 +53,25 @@
                 android:orientation="vertical">
 
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <android.support.design.widget.TextInputEditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Provincia"
-                    android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:hint="Provincia"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/colorText" />
 
-            </android.support.design.widget.TextInputLayout>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginTop="-45dp" />
+
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 
@@ -79,14 +82,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Departamento"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -97,14 +102,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Nombre Comercial"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -115,14 +122,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Comprobante"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -133,14 +142,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Contabilidad"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -151,14 +162,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Actividad"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -169,14 +182,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Documentos"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -187,14 +202,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Afiliado al PLE"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -205,14 +222,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Afiliado al SEE"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -223,14 +242,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Fact. Elec."
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -241,14 +262,16 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Cliente"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -258,30 +281,31 @@
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
                     android:hint="Direccion"
                     android:inputType="textPersonName"
-                    android:layout_marginRight="40dp"/>
+                    android:textColor="@color/colorText" />
+
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="310dp"
-                    android:layout_marginTop="-45dp"/>
+                    android:layout_marginTop="-45dp" />
             </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/btnBuscar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:layout_marginTop="15dp"
-                android:text="Buscar"
-                android:textSize="11pt"
                 android:background="@color/colorAccent"
-                android:textColor="@color/colorText"/>
+                android:text="Buscar"
+                android:textColor="@color/colorText"
+                android:textSize="11pt" />
         </LinearLayout>
 
     </ScrollView>
-
-
 
 
 </LinearLayout>
