@@ -101,7 +101,7 @@ public class HttpHandler {
     public String getDataJson(String response) throws JSONException {
         JSONArray jsonArray = new JSONArray(response);
         String texto = "Not found";
-        texto = jsonArray.getJSONObject(1).getString("nom_ape");
+        texto = jsonArray.getJSONObject(1).getString("per_com");
 
         return texto;
     }
