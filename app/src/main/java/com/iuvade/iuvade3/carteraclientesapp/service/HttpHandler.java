@@ -2,8 +2,12 @@ package com.iuvade.iuvade3.carteraclientesapp.service;
 
 import android.app.Activity;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import com.iuvade.iuvade3.carteraclientesapp.model.ClientModel;
+import com.iuvade.iuvade3.carteraclientesapp.views.adapter.ClientsAdapter;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -11,6 +15,10 @@ import com.loopj.android.http.RequestParams;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.iuvade.iuvade3.carteraclientesapp.R;
+
+import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -22,6 +30,11 @@ public class HttpHandler {
 
     private String msg = "";
     private Activity activity;
+
+    RecyclerView clientsRecycler;
+    ClientsAdapter clientsAdapter;
+
+    ArrayList<ClientModel> clients;
 
     public void login(String url, Activity activity) {
         this.activity = activity;
@@ -35,11 +48,11 @@ public class HttpHandler {
             client.post(url, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                    try {
-                        msg = getDataJson(new String(responseBody));
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        msg = getDataJson(new String(responseBody));
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
                 }
 
                 @Override
@@ -52,7 +65,7 @@ public class HttpHandler {
         }
     }
 
-    public void getDataClient(String url, Activity activity) {
+    public void getDataClient(String url, final Activity activity) {
         this.activity = activity;
 
         try {
@@ -65,9 +78,23 @@ public class HttpHandler {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     try {
-                        msg = getDataJson(new String(responseBody));
+//                        msg = getDataJson(new String(responseBody));
+
+//                        clients=responseBody;
+
+                        clientsRecycler = HttpHandler.this.activity.findViewById(R.id.recyclerClientes);
+                        clientsRecycler.setHasFixedSize(true);
+
+                        LinearLayoutManager layoutManager = new LinearLayoutManager(HttpHandler.this.activity);
+                        clientsRecycler.setLayoutManager(layoutManager);
+
+                        clientsAdapter = new ClientsAdapter();
+                        clientsRecycler.setAdapter(clientsAdapter);
+
+//                        clientsAdapter.setDataSet();
+
                         showMessage("RESULT", msg);
-                    } catch (JSONException e) {
+                    } catch (Exception e) {
                         showMessage("ERROR", e.getMessage());
                     }
                 }
@@ -98,12 +125,13 @@ public class HttpHandler {
         builder.create().show();
     }
 
-    public String getDataJson(String response) throws JSONException {
-        JSONArray jsonArray = new JSONArray(response);
-        String texto = "Not found";
-        texto = jsonArray.getJSONObject(1).getString("nom_ape");
-
-        return texto;
-    }
+//    public ArrayList<ClientModel> getDataJson(String response) throws JSONException {
+//        JSONArray jsonArray = new JSONArray(response);
+//        String texto = "Not found";
+//        texto = jsonArray.getJSONObject(1).getString("per_com");
+//        ArrayList<ClientModel> clients=response.b;
+//
+//        return texto;
+//    }
 
 }
