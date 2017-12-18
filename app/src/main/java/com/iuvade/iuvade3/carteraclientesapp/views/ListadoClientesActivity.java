@@ -40,8 +40,6 @@ public class ListadoClientesActivity extends AppCompatActivity {
 //        String url = "http://192.168.1.45/testRest/test.php";
 //        String url2 = "http://192.168.1.66:3030/api/patients/";
 //        String url3 = "http://192.168.1.33/odontosoft-php/api/patient_api.php?opt=all";
-//        ResourceBundle bundle = ResourceBundle.getBundle("com.iuvade.iuvade3.carteraclientesapp.util.access");
-//        String url = bundle.getString("URL");
         String url = AccessUtil.URL;
         handler.getDataClient(url, this);
     }

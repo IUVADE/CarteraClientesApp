@@ -25,19 +25,23 @@ public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ViewHold
 
     public void setDataSet(ArrayList<ClientModel> dataSet) {
         this.dataSet = dataSet;
+
+        // Actualiza el RecyclerView del view activity_listado_clientes.xml
         notifyDataSetChanged();
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        TextView view = (TextView) LayoutInflater.from(parent.getContext())
+        View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.data_client, parent, false);
         return new ViewHolder(view);
     }
 
+    //    Enlaza la data con los componentes visuales
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.textView.setText(dataSet.get(position).getPerCom());
+        holder.txtNomApe.setText(holder.txtNomApe.getText() + dataSet.get(position).getPerCom());
+        holder.txtPerDir.setText(holder.txtPerDir.getText() + dataSet.get(position).getPerDir());
     }
 
     @Override
@@ -45,12 +49,16 @@ public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ViewHold
         return dataSet.size();
     }
 
+    //    Esta clase se encarga de obtener los componentes del view data_client
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView textView;
+        public TextView txtNomApe;
+        public TextView txtPerDir;
 
-        public ViewHolder(TextView tv) {
-            super(tv);
-            textView = tv;
+        public ViewHolder(View v) {
+            super(v);
+
+            txtNomApe = v.findViewById(R.id.txtNomApe);
+            txtPerDir = v.findViewById(R.id.txtPerDir);
         }
     }
 }

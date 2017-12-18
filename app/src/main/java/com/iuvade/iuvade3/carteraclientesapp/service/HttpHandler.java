@@ -2,6 +2,7 @@ package com.iuvade.iuvade3.carteraclientesapp.service;
 
 import android.app.Activity;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
@@ -78,22 +79,16 @@ public class HttpHandler {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     try {
-//                        msg = getDataJson(new String(responseBody));
-
-//                        clients=responseBody;
-
                         clientsRecycler = HttpHandler.this.activity.findViewById(R.id.recyclerClientes);
                         clientsRecycler.setHasFixedSize(true);
 
-                        LinearLayoutManager layoutManager = new LinearLayoutManager(HttpHandler.this.activity);
+                        GridLayoutManager layoutManager = new GridLayoutManager(HttpHandler.this.activity, 1);
                         clientsRecycler.setLayoutManager(layoutManager);
 
                         clientsAdapter = new ClientsAdapter();
                         clientsRecycler.setAdapter(clientsAdapter);
 
-//                        clientsAdapter.setDataSet();
-
-                        showMessage("RESULT", msg);
+                        clientsAdapter.setDataSet(getDataJson(new String(responseBody)));
                     } catch (Exception e) {
                         showMessage("ERROR", e.getMessage());
                     }
@@ -125,13 +120,22 @@ public class HttpHandler {
         builder.create().show();
     }
 
-//    public ArrayList<ClientModel> getDataJson(String response) throws JSONException {
-//        JSONArray jsonArray = new JSONArray(response);
-//        String texto = "Not found";
-//        texto = jsonArray.getJSONObject(1).getString("per_com");
-//        ArrayList<ClientModel> clients=response.b;
-//
-//        return texto;
-//    }
+    public ArrayList<ClientModel> getDataJson(String response) throws JSONException {
+        JSONArray jsonArray = new JSONArray(response);
+        String texto = "Not found";
+        texto = jsonArray.getJSONObject(0).getString("per_com");
+        ArrayList<ClientModel> clients = new ArrayList<>();
+
+        for (int i = 0; i < jsonArray.length(); i++) {
+            ClientModel clientModel = new ClientModel();
+            clientModel.setCliIde(jsonArray.getJSONObject(i).getInt("cli_ide"));
+            clientModel.setPerIde(jsonArray.getJSONObject(i).getInt("per_ide"));
+            clientModel.setPerCom(jsonArray.getJSONObject(i).getString("per_com"));
+            clientModel.setPerDir(jsonArray.getJSONObject(i).getString("per_dir"));
+            clients.add(clientModel);
+        }
+
+        return clients;
+    }
 
 }

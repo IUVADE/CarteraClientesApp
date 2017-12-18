@@ -9,6 +9,15 @@ public class ClientModel {
     private int cliIde;
     private int perIde;
     private String perCom;
+    private String perDir;
+
+    public String getPerDir() {
+        return perDir;
+    }
+
+    public void setPerDir(String perDir) {
+        this.perDir = perDir;
+    }
 
     public int getCliIde() {
         return cliIde;
