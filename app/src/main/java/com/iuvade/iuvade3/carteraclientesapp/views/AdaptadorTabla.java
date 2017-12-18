@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import com.iuvade.iuvade3.carteraclientesapp.R;
+
 class AdaptadorTabla extends BaseAdapter {
     ArrayList<E_Articulos> itemList=new ArrayList<E_Articulos>();
     Context context;
@@ -29,7 +31,7 @@ class AdaptadorTabla extends BaseAdapter {
     @Override
     public View getView(int position, View argl, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View itemView = inflater.inflate(R.layout.items_tabla, parent, false);
+        View itemView = inflater.inflate(R.layout.activity_tablas, parent, false);
         TextView lblID = (TextView)itemView.findViewById(R.id.lblID);
         TextView lblConcepto = (TextView)itemView.findViewById(R.id.lblConcepto);
         TextView lblSubtotal = (TextView)itemView.findViewById(R.id.lblSubtotal);
@@ -38,7 +40,7 @@ class AdaptadorTabla extends BaseAdapter {
         lblConcepto.setText(itemList.get(position).getConcepto());
         lblSubtotal.setText(""+itemList.get(position).getSubtotal());
         lblTotal.setText(""+itemList.get(position).getTotal());
-        if(position 2==0)
+        if(position ==0)
         {
             itemView.setBackgroundColor(Color.argb(255,248,248,248));
         }

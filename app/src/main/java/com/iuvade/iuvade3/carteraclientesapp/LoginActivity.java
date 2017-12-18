@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.iuvade.iuvade3.carteraclientesapp.views.FiltroClienteActivity;
+import com.iuvade.iuvade3.carteraclientesapp.views.TablasActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 

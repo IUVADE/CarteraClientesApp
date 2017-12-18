@@ -22,7 +22,7 @@ public class TablasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablas);
 
-        listView = (ListView) findViewById(R.id.list);
+        listView  = (ListView) findViewById(R.id.tabla);
         arrayArticulos = new ArrayList<E_Articulos>();
 
         arrayArticulos = new ArrayList<E_Articulos>();
@@ -41,14 +41,18 @@ public class TablasActivity extends AppCompatActivity {
         articulos=new E_Articulos(6,"ipad",240.77,"IPAD 2",33300.22);
         arrayArticulos.add(articulos);
 
-        adapter = new AdaptadorTabla(getApplicationContext(),arrayArticulos);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View item, int position, long id) {
-                Toast.makeText(getApplicationContext(), arrayArticulos.get(position).getDescripcion(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        try {
+            adapter = new AdaptadorTabla(getApplicationContext(),arrayArticulos);
+            listView.setAdapter(adapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View item, int position, long id) {
+                    Toast.makeText(getApplicationContext(), arrayArticulos.get(position).getDescripcion(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+        }
 
     }
 }
