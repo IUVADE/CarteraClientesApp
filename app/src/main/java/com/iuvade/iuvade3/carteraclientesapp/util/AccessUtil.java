@@ -5,5 +5,5 @@ package com.iuvade.iuvade3.carteraclientesapp.util;
  */
 
 public class AccessUtil {
-    public static final String URL = "http://192.168.1.35/clientes";
+    public static final String URL = "http://192.168.1.44/sigem/init.php?tgs=php.facturacion.cliente.cliente.testRestServiceClient";
 }
