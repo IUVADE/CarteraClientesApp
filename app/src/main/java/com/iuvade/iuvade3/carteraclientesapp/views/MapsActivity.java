@@ -1,4 +1,4 @@
-package com.iuvade.iuvade3.carteraclientesapp;
+package com.iuvade.iuvade3.carteraclientesapp.views;
 
 import android.Manifest;
 import android.content.Context;
@@ -22,6 +22,12 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.iuvade.iuvade3.carteraclientesapp.R;
+import com.iuvade.iuvade3.carteraclientesapp.views.ClienteActivity;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.TextHttpResponseHandler;
+
+import cz.msebera.android.httpclient.Header;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -39,6 +45,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
     }
 
     @Override
@@ -135,4 +143,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         }
     }
+
+
 }

@@ -4,40 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wall4"
     tools:context="com.iuvade.iuvade3.carteraclientesapp.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/wall4">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@drawable/escudo"/>
-        <EditText
-            android:id="@+id/Usuario"
+            android:layout_marginTop="10pt"
+            android:layout_marginRight="5pt"
+            android:layout_marginLeft="5pt"
+            android:src="@drawable/logo_in_white"/>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usuario"
-            android:layout_marginRight="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="15dp"/>
-        <EditText
-            android:id="@+id/passwor"
+            android:layout_marginTop="15dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/Usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Usuario"
+                android:inputType="textPersonName"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Clave"
-            android:layout_marginRight="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="25dp" />
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/passwor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Clave"
+                android:inputType="textPassword"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"/>
+        </android.support.design.widget.TextInputLayout>
+
         <Button
             android:id="@+id/boton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Aceptar" />
+            android:layout_marginRight="5pt"
+            android:layout_marginLeft="5pt"
+            android:text="@string/btnlogin"
+            android:textSize="12pt"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorText"/>
 
     </LinearLayout>
 

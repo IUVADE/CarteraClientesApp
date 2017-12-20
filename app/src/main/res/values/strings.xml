@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">CarteraClientesApp</string>
+    <string name="app_name">IUVADE - Clientes</string>
     <string name="title_activity_maps">Map</string>
+    <string name="btnlogin">INGRESAR</string>
 </resources>
