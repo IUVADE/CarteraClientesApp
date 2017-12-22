@@ -32,6 +32,4 @@ public class FiltroClienteActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
