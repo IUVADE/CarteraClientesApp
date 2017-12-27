@@ -53,7 +53,7 @@ public class HttpHandler {
             client.post(url, params, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                    //HttpHandler.this.activity.lis = validateCredentials(new String(responseBody));
+                    HttpHandler.this.clients = validateCredentials(new String(responseBody));
                 }
 
                 @Override
