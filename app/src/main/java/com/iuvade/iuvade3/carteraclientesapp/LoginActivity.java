@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.boton).setOnClickListener(this);
         if(!checkPermisos()) {
             perdirPermisos();
+//            this.setTitle("pablo");
         }
     }
 

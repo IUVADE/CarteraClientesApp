@@ -316,14 +316,27 @@
                     android:id="@+id/btnBuscar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="185dp"
+                    android:layout_marginTop="5dp"
                     android:background="@color/colorAccent"
-                    android:text="Buscar"
+                    android:text="Ver Mapa"
                     android:textColor="@color/colorText"
                     android:textSize="11pt" />
+
+                <Button
+                    android:id="@+id/btnDetalles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="185dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="-64dp"
+                    android:background="@color/colorAccent"
+                    android:text="Detalle"
+                    android:textColor="@color/colorText"
+                    android:textSize="11pt"/>
             </LinearLayout>
 
         </ScrollView>
